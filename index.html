@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafıza Kart Oyunu 🎴</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎴</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-brain"></i> Hafıza Kart Oyunu</h1>
+            <p class="subtitle">Iconları eşleştirerek hafızanı test et!</p>
+        </header>
+
+        <div class="game-info">
+            <div class="stats">
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span>Süre: <span id="timer">0</span>s</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Hamle: <span id="moves">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span>Skor: <span id="score">0</span></span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Oyunu Başlat
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <i class="fas fa-redo"></i> Yeniden Başlat
+                </button>
+                <button id="hintBtn" class="btn btn-hint">
+                    <i class="fas fa-lightbulb"></i> İpucu
+                </button>
+            </div>
+        </div>
+
+        <div class="difficulty">
+            <h3><i class="fas fa-sliders-h"></i> Zorluk Seviyesi:</h3>
+            <div class="difficulty-buttons">
+                <button class="diff-btn active" data-level="easy">Kolay (4x4)</button>
+                <button class="diff-btn" data-level="medium">Orta (4x5)</button>
+                <button class="diff-btn" data-level="hard">Zor (5x6)</button>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Kartlar buraya JavaScript ile eklenecek -->
+        </div>
+
+        <div class="message" id="message">
+            <div class="message-content">
+                <h2 id="messageTitle">Tebrikler! 🎉</h2>
+                <p id="messageText">Oyunu başarıyla tamamladın!</p>
+                <div class="message-stats">
+                    <p><i class="fas fa-clock"></i> Süre: <span id="finalTime">0</span> saniye</p>
+                    <p><i class="fas fa-sync-alt"></i> Hamle: <span id="finalMoves">0</span></p>
+                    <p><i class="fas fa-star"></i> Skor: <span id="finalScore">0</span></p>
+                </div>
+                <button id="closeMessage" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Tekrar Oyna
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p><i class="fas fa-code"></i> Termux + GitHub AI Asistanı ile geliştirildi</p>
+            <p class="footer-icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-brain"></i>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
